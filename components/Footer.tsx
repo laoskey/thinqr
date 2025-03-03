@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Facebook, Instagram, Twitter } from "lucide-react";
 const socialLinks = ["twitter", "facebook", "instagram"];
 const quickLinks = [
