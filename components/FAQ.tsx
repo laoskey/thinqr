@@ -56,7 +56,7 @@ export default function FAQ() {
 
   return (
     <section
-      className="py-16 bg-white"
+      className="py-16 bg-gray-950 text-white"
       id="faqs"
     >
       <div className="container mx-auto px-4">
@@ -77,11 +77,11 @@ export default function FAQ() {
               key={index}
               className=" rounded-lg p-6 hover:shadow-lg transition"
             >
-              <div className="flex justify-center w-8 h-8 p-2  mb-4 items-center text-white text-md bg-black rounded-full ">
+              <div className="flex justify-center w-8 h-8 p-2  mb-4 items-center text-white text-md bg-gray-800 rounded-full ">
                 0{index}
               </div>
               <h3 className="text-xl font-semibold mb-3 flex-wrap">{faq.question}</h3>
-              <p className="text-gray-600">{faq.answer}</p>
+              <p className="text-gray-500">{faq.answer}</p>
             </div>
           ))}
         </div>

@@ -50,7 +50,9 @@ export default function ProjectShowcase() {
       id="projectcases"
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">PROJECT SHOWCASE</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 capitalize">
+          Recent work showcase
+        </h2>
         <div
           ref={scrollContainerRef}
           className="flex overflow-x-auto scrollbar-hide space-x-6 pb-4"
