@@ -63,7 +63,7 @@ const testimonials = [
 ];
 
 const TestimonialCard = ({ testimonial }: { testimonial: (typeof testimonials)[0] }) => (
-  <div className="bg-gray-900 p-6 rounded-lg w-[20rem] h-[17rem] mx-4 flex flex-col">
+  <div className="bg-white shadow-lg p-6 rounded-lg w-[20rem] h-[17rem] mx-4 flex flex-col border-t-2 border-b-[1px] border-gray-100">
     <div className="flex items-center mb-4">
       <Image
         src={`/images/avatars/${testimonial.image}`}
@@ -88,8 +88,8 @@ const TestimonialCard = ({ testimonial }: { testimonial: (typeof testimonials)[0
         </svg>
       ))}
     </div>
-    <p className="text-gray-300 line-clamp-3 flex-grow">&quot;{testimonial.content}&quot;</p>
-    <p className="text-gray-400 text-right mt-2">{testimonial.position}</p>
+    <p className="text-gray-500 line-clamp-3 flex-grow">&quot;{testimonial.content}&quot;</p>
+    <p className="text-gray-700 text-right mt-2">{testimonial.position}</p>
   </div>
 );
 
@@ -181,9 +181,9 @@ export default function Testimonials() {
   }, [animate, handleMouseEnter, handleMouseLeave]);
 
   return (
-    <section className="py-16 bg-black text-white overflow-hidden">
+    <section className="py-16 bg-white text-black overflow-hidden">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What Our Clients Are Saying</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Work with great people</h2>
         <div className="space-y-12">
           {/* Left to Right Row */}
           <div className="relative">
@@ -191,7 +191,7 @@ export default function Testimonials() {
               ref={leftRowRef}
               className="flex overflow-x-hidden"
             >
-              <div className="flex">
+              <div className="flex py-1">
                 {[...testimonials, ...testimonials].map((testimonial, index) => (
                   <TestimonialCard
                     key={index}
@@ -200,8 +200,8 @@ export default function Testimonials() {
                 ))}
               </div>
             </div>
-            <div className="absolute left-0 top-0 w-1/6 h-full bg-gradient-to-r from-black to-transparent pointer-events-none" />
-            <div className="absolute right-0 top-0 w-1/6 h-full bg-gradient-to-l from-black to-transparent pointer-events-none" />
+            <div className="absolute left-0 top-0 w-1/6 h-full bg-gradient-to-r from-gray-50/50 to-transparent pointer-events-none" />
+            <div className="absolute right-0 top-0 w-1/6 h-full bg-gradient-to-l from-gray-50/50 to-transparent pointer-events-none" />
           </div>
 
           {/* Right to Left Row */}
@@ -219,8 +219,8 @@ export default function Testimonials() {
                 ))}
               </div>
             </div>
-            <div className="absolute left-0 top-0 w-1/6 h-full bg-gradient-to-r from-black to-transparent pointer-events-none" />
-            <div className="absolute right-0 top-0 w-1/6 h-full bg-gradient-to-l from-black to-transparent pointer-events-none" />
+            <div className="absolute left-0 top-0 w-1/6 h-full bg-gradient-to-r from-gray-50/50 to-transparent pointer-events-none" />
+            <div className="absolute right-0 top-0 w-1/6 h-full bg-gradient-to-l from-gray-50/50 to-transparent pointer-events-none" />
           </div>
         </div>
       </div>

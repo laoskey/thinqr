@@ -1,0 +1,22 @@
+.c--cta-c:hover::before {
+  width: calc(100% - 1.5rem);
+}
+.c--cta-c--second::before {
+  background-color: #0f0f0f;
+}
+.c--cta-c::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 200%;
+  width: 0;
+  border-radius: 0 300rem 300rem 0;
+  transition: width 0.3s cubic-bezier(0.2, 0, 0.38, 0.9);
+}
+
+.c--cta-c {
+  text-decoration: none;
+  padding: 5rem 0rem;
+}

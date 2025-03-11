@@ -46,7 +46,7 @@ export default function ProjectShowcase() {
 
   return (
     <section
-      className="py-16 bg-black text-white overflow-hidden"
+      className="py-16 bg-black text-white overflow-hidden mt-16 "
       id="projectcases"
     >
       <div className="container mx-auto px-4">

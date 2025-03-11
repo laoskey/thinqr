@@ -22,3 +22,48 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.c--cta-c {
+  text-decoration: none;
+  padding: 5rem 0rem;
+  z-index: 1;
+}
+
+.c--cta-c:hover::before {
+  width: calc(100% - 0.5rem);
+}
+.c--cta-c--second::before {
+  background-color: #0f0f0f;
+}
+.c--cta-c::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 200%;
+  width: 0;
+  border-radius: 0 50rem 50rem 0;
+  transition: width 0.3s cubic-bezier(0.2, 0, 0.38, 0.9);
+}
+.c--cta-c:hover .c--cta-c-warpper {
+  z-index: 10;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s cubic-bezier(0.2, 0, 0.38, 0.9);
+}
+.c--cta-c:hover .c--cta-c-warpper-svg {
+  /* transform: translateX(20px); */
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0.38, 0.9);
+  background-color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  cursor: pointer;
+}
+.c--cta-c-warpper {
+  font-size: 5rem;
+  font-weight: 600;
+}

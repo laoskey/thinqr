@@ -2,7 +2,9 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 bg-black z-50 border-b border-gray-800 ">
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="text-2xl font-bold text-white ">Logo</div>
+        <div className="text-3xl font-bold  bg-gradient-to-r from-[#00ff99] to-[#00ccff] bg-clip-text text-transparent ">
+          Eric
+        </div>
         <div className="hidden md:flex space-x-8">
           <a
             href="#hero"
