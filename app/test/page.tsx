@@ -1,9 +1,8 @@
-import Cta from "@/components/new/Cta";
-
+import HoverCard from "@/components/new/HoverCard";
 export default function Page() {
   return (
-    <div>
-      <Cta />
+    <div className="flex justify-center items-center h-screen bg-black">
+      <HoverCard />
     </div>
   );
 }

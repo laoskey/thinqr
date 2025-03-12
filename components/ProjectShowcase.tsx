@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useRef, useEffect } from "react";
+import HoverCard from "./new/HoverCard";
 
 export default function ProjectShowcase() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -46,19 +47,20 @@ export default function ProjectShowcase() {
 
   return (
     <section
-      className="py-16 bg-black text-white overflow-hidden mt-16 "
-      id="projectcases"
+      className="py-16 bg-black text-white overflow-hidden mt-16 min-h-[100vh-4rem] "
+      id="projects"
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 capitalize">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 capitalize">
           Recent work showcase
         </h2>
         <div
           ref={scrollContainerRef}
-          className="flex overflow-x-auto scrollbar-hide space-x-6 pb-4"
+          className="flex overflow-x-auto scrollbar-hide space-x-6 pb-4 min-h-[500px] "
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          {[1, 2, 3, 4, 5, 6].map((item) => (
+          <HoverCard />
+          {/* {[1, 2, 3, 4, 5, 6].map((item) => (
             <div
               key={item}
               className="flex-none w-[300px] overflow-hidden rounded-lg transition-transform duration-300 hover:scale-105 relative"
@@ -74,7 +76,7 @@ export default function ProjectShowcase() {
                 <h3 className="text-lg font-bold">Project {item}</h3>
               </div>
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
 

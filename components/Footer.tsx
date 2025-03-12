@@ -1,10 +1,12 @@
-import { Facebook, Instagram, Twitter } from "lucide-react";
-const socialLinks = ["twitter", "facebook", "instagram"];
+import { Facebook, Github, Instagram, Mail, Twitter } from "lucide-react";
+import Link from "next/link";
+import { IoLogoWechat as Wechat } from "react-icons/io5";
+const socialLinks = ["mail", "github", "wechat"];
 const quickLinks = [
   { name: "Home", href: "#" },
-  { name: "Services", href: "#" },
-  { name: "Projects", href: "#" },
-  { name: "Contact", href: "#" },
+  { name: "Services", href: "#services" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export default function Footer() {
@@ -40,29 +42,39 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400">
               <li>123 Business Street</li>
-              <li>+1 234 567 890</li>
-              <li>info@company.com</li>
+              <li>+86 182 2447 6162</li>
+              <li>
+                <Link href="mailto:coderericontheway@gmail.com">coderericontheway@gmail.com</Link>
+              </li>
             </ul>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
-                <a
+                <div
                   key={social}
-                  href="#"
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700"
+                  // href="#"
+                  className="w-10 h-10 bg-gray-500 text-white rounded-full flex items-center justify-center hover:bg-gray-700"
                 >
-                  {social === "twitter" && <Twitter />}
-                  {social === "facebook" && <Facebook />}
-                  {social === "instagram" && <Instagram />}
-                </a>
+                  {social === "github" && (
+                    <Link href={"https://github.com/laoskey"}>
+                      <Github size={20} />
+                    </Link>
+                  )}
+                  {social === "mail" && (
+                    <Link href="mailto:coderericontheway@gmail.com">
+                      <Mail size={20} />
+                    </Link>
+                  )}
+                  {social === "wechat" && <Wechat size={22} />}
+                </div>
               ))}
             </div>
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+          <p>&copy; 2024 Eric. All rights reserved.</p>
         </div>
       </div>
     </footer>
