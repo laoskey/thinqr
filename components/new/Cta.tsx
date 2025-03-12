@@ -1,5 +1,11 @@
-import styles from "./Cta.module.css";
+"use client";
 export default function Cta() {
+  const onMovetoContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section className="relative mt-16 mb-24 h-32 ">
       <div className="w-full h-full flex  justify-around c--cta-c c--cta-c--second">
@@ -9,7 +15,10 @@ export default function Cta() {
         >
           <div className="flex items-center flex-row justify-end gap-16 mx-auto ">
             <div className="relative z-10">Lets talk!</div>
-            <div className="bg-black rounded-full p-2 text-white c--cta-c-warpper-svg ">
+            <div
+              className="bg-black rounded-full p-2 text-white c--cta-c-warpper-svg "
+              onClick={() => onMovetoContact()}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

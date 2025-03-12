@@ -1,50 +1,57 @@
+"use client";
 import Link from "next/link";
 
 export default function Header() {
+  const onMoveTo = (id: string) => {
+    const targetSection = document.getElementById(id);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <header className="fixed top-0 left-0 right-0 bg-black z-50 border-b border-gray-800 ">
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="text-3xl font-bold  bg-gradient-to-r from-[#00ff99] to-[#00ccff] bg-clip-text text-transparent ">
           Eric
         </div>
-        <div className="hidden md:flex space-x-8">
+        <ul className="hidden md:flex space-x-8 [&>li]:cursor-pointer">
           {/* <a
             href="#hero"
             className="text-white hover:text-gray-300"
           >
             Process
           </a> */}
-          <Link
-            href="#services"
+          <li
+            onClick={() => onMoveTo("hero")}
             className="text-white hover:text-gray-300"
           >
-            Benefits
-          </Link>
-          <Link
-            href="#services"
-            className="text-white hover:text-gray-300"
-          >
-            Services
-          </Link>
-          <Link
-            href="#projects"
+            About
+          </li>{" "}
+          <li
+            onClick={() => onMoveTo("projects")}
             className="text-white hover:text-gray-300"
           >
             Projects
-          </Link>
-          <Link
-            href="#faqs"
+          </li>
+          <li
+            onClick={() => onMoveTo("services")}
+            className="text-white hover:text-gray-300"
+          >
+            Services
+          </li>
+          <li
+            onClick={() => onMoveTo("faqs")}
             className="text-white hover:text-gray-300"
           >
             FAQs
-          </Link>
-          <Link
-            href="#contact"
+          </li>
+          <li
+            onClick={() => onMoveTo("contact")}
             className="text-white hover:text-gray-300"
           >
             Let&apos;s Talk
-          </Link>
-        </div>
+          </li>
+        </ul>
         {/* <Toggle /> */}
         <button className="md:hidden text-white">
           <svg

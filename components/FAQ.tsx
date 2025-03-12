@@ -78,7 +78,7 @@ export default function FAQ() {
               className=" rounded-lg p-6 hover:shadow-lg transition"
             >
               <div className="flex justify-center w-8 h-8 p-2  mb-4 items-center text-white text-md bg-gray-800 rounded-full ">
-                0{index}
+                0{index + 1}
               </div>
               <h3 className="text-xl font-semibold mb-3 flex-wrap">{faq.question}</h3>
               <p className="text-gray-500">{faq.answer}</p>

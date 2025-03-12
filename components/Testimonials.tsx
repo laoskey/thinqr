@@ -5,58 +5,40 @@ import { useRef, useEffect, useCallback } from "react";
 
 const testimonials = [
   {
-    name: "John Doe",
-    position: "CEO at Company",
+    name: "LiuDi",
+    position: "Manager of the Jtech",
     image: "1.png",
     content:
       "Working with this team has been an amazing experience. They delivered beyond our expectations.",
   },
   {
-    name: "Jane Smith",
-    position: "CTO at Startup",
+    name: "ChenRuixiao",
+    position: "Senior Software Engineer",
     image: "2.png",
     content: "Their expertise and dedication to quality is unmatched. Highly recommended!",
   },
   {
-    name: "Mike Johnson",
-    position: "Founder at Tech",
+    name: "LiJie",
+    position: "Team leader of the CSIC",
     image: "3.png",
     content: "The team's attention to detail and innovative solutions exceeded our expectations.",
   },
   {
     name: "John Akj",
-    position: "CEO at Company",
+    position: "Founder of the Greenseed.co",
     image: "1.png",
     content:
       "Working with this team has been an amazing experience. They delivered beyond our expectations.",
   },
   {
-    name: "Smith Wellson",
-    position: "CTO at Startup",
+    name: "NiMingyun",
+    position: "Manager of the QDbank",
     image: "2.png",
     content: "Their expertise and dedication to quality is unmatched. Highly recommended!",
   },
   {
     name: "Aka Johnson",
-    position: "Founder at Tech",
-    image: "3.png",
-    content: "The team's attention to detail and innovative solutions exceeded our expectations.",
-  },
-  {
-    name: "Aka Johnson",
-    position: "Founder at Tech",
-    image: "3.png",
-    content: "The team's attention to detail and innovative solutions exceeded our expectations.",
-  },
-  {
-    name: "Aka Johnson",
-    position: "Founder at Tech",
-    image: "3.png",
-    content: "The team's attention to detail and innovative solutions exceeded our expectations.",
-  },
-  {
-    name: "Aka Johnson",
-    position: "Founder at Tech",
+    position: "Customer from the Canada",
     image: "3.png",
     content: "The team's attention to detail and innovative solutions exceeded our expectations.",
   },
@@ -108,7 +90,7 @@ export default function Testimonials() {
       animationRef: { current?: number },
       positionRef: { current: number }
     ) => {
-      const speed = 0.5;
+      const speed = 1;
       let position = positionRef.current;
 
       const step = () => {
