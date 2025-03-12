@@ -9,7 +9,7 @@ import FAQ from "@/components/FAQ";
 import Cta from "@/components/new/Cta";
 export default function page() {
   return (
-    <div className=" ">
+    <div className="max-w-[1200px] mx-auto">
       {/* <Animated /> */}
       <div className="mt-15 hidden md:block">
         <Ani />

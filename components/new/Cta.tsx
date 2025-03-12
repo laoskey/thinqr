@@ -7,7 +7,7 @@ export default function Cta() {
     }
   };
   return (
-    <section className="relative mt-16 mb-24 h-32 ">
+    <section className="relative mt-24 mb-24 h-32 ">
       <div className="w-full h-full flex  justify-around c--cta-c c--cta-c--second">
         <div
           className=" text-black c--cta-c-warpper flex items-center

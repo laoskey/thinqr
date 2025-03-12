@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <main>
+        <main className="max-w-screen bg-black">
           {/* <ThemeProvider
             attribute="class"
             defaultTheme="system"

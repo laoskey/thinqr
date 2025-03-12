@@ -117,7 +117,7 @@ const Ani = () => {
   return (
     <div
       className={`${
-        showAni ? "block" : "hidden"
+        showAni ? "md:block" : "hidden"
       } relative min-h-screen bg-gradient-to-r from-[#2a4dec] to-[#0fdb27] transition-all ease-in-out duration-300`}
     >
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[750px] h-[500px]">

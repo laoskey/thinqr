@@ -54,7 +54,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen max-h-[1200px] bg-black flex flex-col items-center justify-center overflow-hidden px-4 pt-16 "
+      className="relative min-h-screen max-w-[1200px] bg-black flex flex-col items-center justify-center overflow-hidden px-4 pt-16 "
     >
       <div className="container w-full h-full mx-auto flex flex-col lg:flex-row items-center gap-8 rounded-lg">
         <motion.div
@@ -65,7 +65,7 @@ const Hero = () => {
           variants={containerVariants}
         >
           <motion.h1
-            className="text-3xl md:text-6xl font-bold mb-2 h-[4rem] from-[#2a4dec] to-[#0fdb27] transition-all ease-in-out duration-300 bg-clip-text text-transparent bg-gradient-to-r"
+            className="mt-[4rem] md:mt-0 text-3xl md:text-6xl font-bold mb-2 h-[4rem] from-[#2a4dec] to-[#0fdb27] transition-all ease-in-out duration-300 bg-clip-text text-transparent bg-gradient-to-r"
             variants={itemVariants}
           >
             Hi, i&apos;m EricTang
@@ -100,7 +100,7 @@ const Hero = () => {
             </div>
           </motion.div>
           <motion.div
-            className="mt-12 px-8 py-4  rounded-lg bg-green-700 hover:bg-green-800 cursor-pointer transition-all ease-in-out duration-300 w-fit"
+            className="w-full md:w-fit mt-12 px-8 py-4  rounded-lg bg-green-700 hover:bg-green-800 cursor-pointer transition-all ease-in-out duration-300 "
             variants={itemVariants}
           >
             <div className="text-white font-semibold text-lg hover:text-gray-100 transition-all ease-in-out duration-300 ">
@@ -110,7 +110,7 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          className="relative lg:w-1/2"
+          className="relative lg:w-1/2 w-[600px] h-[400px] md:w-[800px] md:h-[600px]  overflow-hidden"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
@@ -119,10 +119,9 @@ const Hero = () => {
           <Image
             src="/avatar.png"
             alt="Hero Image"
-            width={1200}
-            height={800}
-            className="w-full rounded-lg scale-90"
-            priority
+            fill
+            className=" rounded-lg scale-90"
+            objectFit="cover"
           />
         </motion.div>
       </div>
